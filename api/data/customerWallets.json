@@ -1,0 +1,40 @@
+{
+    "0": {
+        "desired_bed_cleanup": true,
+        "has_dry_leaves": true,
+        "has_wet_leaves": true,
+        "has_fallen_limbs": false,
+        "has_cut_limbs": false,
+        "has_rocks": true,
+        "has_mulch": true,
+        "has_pine": false,
+        "has_pet_waste": false,
+        "has_other": true,
+        "has_cement": false,
+        "has_acorns": true,
+        "has_pine_cones": false,
+        "other_debris": "this is a description of the other types of debris I have",
+        "last_service": "8_to_12_weeks",
+        "desired_haulaway": true,
+        "details": "these are some details"
+    },
+    "1": {
+        "desired_bed_cleanup": false,
+        "has_dry_leaves": true,
+        "has_wet_leaves": true,
+        "has_fallen_limbs": false,
+        "has_cut_limbs": false,
+        "has_rocks": false,
+        "has_mulch": true,
+        "has_pine": false,
+        "has_pet_waste": false,
+        "has_other": true,
+        "has_cement": true,
+        "has_acorns": true,
+        "has_pine_cones": false,
+        "other_debris": "this is a description of the other types of debris I have",
+        "last_service": "1_to_2_weeks",
+        "desired_haulaway": false,
+        "details": "details"
+    }
+}
