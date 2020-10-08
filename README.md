@@ -1,10 +1,12 @@
 # This is an API to conver JSON 2 CSV for the LawnStarter JSON Format
-# Sample format can be found at file:
+
+Sample format can be found at file:
 
 /api/data/standardJSON.json
 
-# This project adds the endpoint 'postJson', where the user can provide a JSON Data Stream
-# In the above format and receive a CSV file in the format required in the tests
+# This project adds the endpoint 'postJson'
+
+The user can provide a JSON Data Stream in the above format and receive a CSV file in the format required in the tests
 
 # TO install:
 
