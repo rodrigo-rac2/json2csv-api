@@ -1,0 +1,151 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "3.0.0",
+        "title": "RESTful JSON to CSV API converter",
+        "description": "RESTful JSON to CSV API converter",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/api/v1/",
+    "tags": [
+        {
+            "name": "JSON to CSV API Converter",
+            "description": "API for users to convert JSON to CSV"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/getCsv": {
+            "get": {
+                "tags": [
+                    "getCsv"
+                ],
+                "summary": "Returns the CSV for the provided file by default (in /api/data/)",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/JSONString"
+                        }
+                    }
+                }
+            }
+        },
+        "/postJSon": {
+            "post": {
+                "tags": [
+                    "postJson"
+                ],
+                "summary": "Posts JSON string and get the CSV equivalent in return",
+                "description": "Posts JSON string and get the CSV equivalent in return",
+                "parameters": [
+                    {
+                        "id": "list of parameters",
+                        "schema": {
+                            "$ref": "#/definitions/JSONString"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CSV in the expected format",
+                        "schema": {
+                            "$ref": "#/definitions/JSONString"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "id": {
+            "required": [
+                "desired_bed_cleanup",
+                "has_dry_leaves",
+                "has_wet_leaves",
+                "has_fallen_limbs",
+                "has_cut_limbs",
+                "has_rocks",
+                "has_mulch",
+                "has_pine",
+                "has_other",
+                "has_cement",
+                "has_acorns",
+                "has_pine_cones",
+                "other_debris",
+                "last_service",
+                "desired_haulaway",
+                "details"
+            ],
+            "properties": {
+                "desired_bed_cleanup": {
+                    "type": "boolean"
+                },
+                "has_dry_leaves": {
+                    "type": "boolean"
+                },
+                "has_wet_leaves": {
+                    "type": "boolean"
+                },
+                "has_fallen_limbs": {
+                    "type": "boolean"
+                },
+                "has_cut_limbs": {
+                    "type": "boolean"
+                },
+                "has_rocks": {
+                    "type": "boolean"
+                },
+                "has_mulch": {
+                    "type": "boolean"
+                },
+                "has_pine": {
+                    "type": "boolean"
+                },
+                "has_other": {
+                    "type": "boolean"
+                },
+                "has_cement": {
+                    "type": "boolean"
+                },
+                "has_acorns": {
+                    "type": "boolean"
+                },
+                "has_pine_cones": {
+                    "type": "boolean"
+                },
+                "other_debris": {
+                    "type": "string"
+                },
+                "last_service": {
+                    "type": "string"
+                },
+                "desired_haulaway": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "JSONString": {
+            "type": "array",
+            "$ref": "#/definitions/id"
+        }
+    }
+}
